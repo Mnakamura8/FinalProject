@@ -10,9 +10,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        
-        
         NavigationView {
             List {
                 NavigationLink {
@@ -32,6 +29,8 @@ struct ContentView: View {
             }.navigationTitle("Home")
         }
     }
+    // this is some new textr
+    // foo bar
 }
 
 struct ContentView_Previews: PreviewProvider {
