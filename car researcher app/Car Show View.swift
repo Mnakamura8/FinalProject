@@ -21,7 +21,13 @@ import SwiftUI
 
 struct Car_Show_View: View {
     var body: some View {
-        Text("Have Some Cars Plz")
+        List {
+        
+            Text("Have Some Cars Plz")
+        }
+        
+        
+      
     }
 }
 
