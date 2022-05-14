@@ -7,6 +7,8 @@
 
 // Takes input fom Selector View, gives output to car show view. Also where the presets live
 
+//Yromo will be in Calculator View adding the Arrays for the cars and the functions to make the 
+
 import SwiftUI
 
 enum Transmission : String, CaseIterable {

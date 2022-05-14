@@ -29,6 +29,9 @@ struct ContentView: View {
             }.navigationTitle("Home")
         }
     }
+    func doSomething() {
+        
+    }
     // this is some new textr
     // foo bar
 }
