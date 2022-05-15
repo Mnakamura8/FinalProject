@@ -11,6 +11,17 @@
 
 import SwiftUI
 
+enum CarMake: String { //Add String to add raw value
+    case toyota = "Toyota Accord"
+    case honda = "Honda"
+    case chevy = "Chevy Silverado"
+    case subaru = "Subaru"
+    case dodgeCaravan = "Dodge Caravan"
+    case ferrari = "Ferrari"
+    case tesla = "Tesla"
+}
+
+
 enum Transmission : String, CaseIterable {
     case cvt = "CVT"
     case manual = "Manual"
@@ -38,31 +49,45 @@ enum DoorNumber : String, CaseIterable {
 
 
 
-struct SelectorViewItems : Identifiable{
 
-    var id = UUID().uuidString
+
+struct SelectorViewItems : Identifiable{
     
+    var id = UUID().uuidString
+    var make : CarMake
     var trans : Transmission
     var power : PowerType
     var drive : WheelDrive
     var size : CarSize
     var howManyDoors : DoorNumber // Display two door cars initial?
     
-//    var makeAndModel : String
-//    var image : String
-   
+    //    var makeAndModel : String
+    //    var image : String
+    
 }
-
-
 
 struct Calculator_View: View {
     
     
     @State var carData : [SelectorViewItems] = [
-        SelectorViewItems(trans: .cvt, power: .gas, drive: .awd, size: .large, howManyDoors:.fourDoors), //essentially Subaru Outback
-    
-        SelectorViewItems (trans: .automatic, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors) // Essentially Ford Focus
-    
+        //essentially Subaru Outback
+        SelectorViewItems(make: .subaru, trans: .cvt, power: .gas, drive: .awd, size: .large, howManyDoors:.fourDoors),
+        //Honda
+        SelectorViewItems (make: .honda, trans: .automatic, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors),
+        
+        //MiniVan Dodge Caravan
+        SelectorViewItems (make: .dodgeCaravan, trans: .automatic, power: .gas, drive: .awd, size: .small, howManyDoors: .fourDoors),
+        
+        //Ferrari
+        SelectorViewItems (make: .ferrari, trans: .cvt, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors),
+        
+        //Toyota Camry
+        SelectorViewItems(make: .toyota, trans: .automatic, power: .electric, drive: .fwd, size: .small, howManyDoors: .fourDoors),
+        //Tesla
+        SelectorViewItems(make: .tesla, trans: .automatic, power: .electric, drive: .fwd, size: .small, howManyDoors: .fourDoors),
+        //Chevy Silverado
+        SelectorViewItems(make: .chevy, trans: .automatic, power: .diesel, drive: .awd, size: .large, howManyDoors: .fourDoors)
+        
     ]
     
     
