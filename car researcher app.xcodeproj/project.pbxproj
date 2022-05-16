@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		840B4F2928301511002EE626 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B4F2828301511002EE626 /* WelcomeView.swift */; };
+		840B4F2B2831C32C002EE626 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B4F2A2831C32C002EE626 /* Extensions.swift */; };
 		848BF10D282F17380071B361 /* car_researcher_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BF10C282F17380071B361 /* car_researcher_appApp.swift */; };
 		848BF10F282F17380071B361 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BF10E282F17380071B361 /* ContentView.swift */; };
 		848BF111282F173B0071B361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848BF110282F173B0071B361 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		840B4F2828301511002EE626 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		840B4F2A2831C32C002EE626 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		848BF109282F17380071B361 /* car researcher app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "car researcher app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		848BF10C282F17380071B361 /* car_researcher_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = car_researcher_appApp.swift; sourceTree = "<group>"; };
 		848BF10E282F17380071B361 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				848BF11E282F766A0071B361 /* Calculator View.swift */,
 				848BF11A282F5EB10071B361 /* Car Show View.swift */,
 				848BF11C282F60230071B361 /* Selector View.swift */,
+				840B4F2A2831C32C002EE626 /* Extensions.swift */,
 				848BF120282F883A0071B361 /* PresetView.swift */,
 				840B4F2828301511002EE626 /* WelcomeView.swift */,
 				848BF110282F173B0071B361 /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 				848BF10F282F17380071B361 /* ContentView.swift in Sources */,
 				848BF121282F883A0071B361 /* PresetView.swift in Sources */,
 				848BF11B282F5EB10071B361 /* Car Show View.swift in Sources */,
+				840B4F2B2831C32C002EE626 /* Extensions.swift in Sources */,
 				848BF11F282F766A0071B361 /* Calculator View.swift in Sources */,
 				848BF11D282F60230071B361 /* Selector View.swift in Sources */,
 				848BF10D282F17380071B361 /* car_researcher_appApp.swift in Sources */,

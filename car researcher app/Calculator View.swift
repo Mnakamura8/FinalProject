@@ -16,7 +16,7 @@ enum CarMake: String { //Add String to add raw value
     case honda = "Honda"
     case chevy = "Chevy Silverado"
     case subaru = "Subaru"
-    case dodgeCaravan = "Dodge Caravan"
+    case dodgeCaravan
     case ferrari = "Ferrari"
     case tesla = "Tesla"
 }
