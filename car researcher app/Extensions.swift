@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+
 extension Text {
     func mainTitle() -> some View {
         self .font(.title)
@@ -22,6 +23,9 @@ extension Text {
             .multilineTextAlignment(.center)
             .padding(.leading)
     }
+    
+    
+
 }
 
 
