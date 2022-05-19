@@ -16,7 +16,7 @@ enum CarMake: String { //Add String to add raw value
     case honda = "Honda"
     case chevy = "Chevy Silverado"
     case subaru = "Subaru"
-    case dodgeCaravan
+    case dodgeCaravan = "Dodge Caravan"
     case ferrari = "Ferrari"
     case tesla = "Tesla"
 }
@@ -94,11 +94,11 @@ struct Calculator_View: View {
     @State var filteredArray: [SelectorViewItems] = []
 
     
-//    func filterUpdate() {
-//        let cast = ["Vivien", "Marlon", "Kim", "Karl"]
-//        let shortNames = cast.filter { $0.count < 5 }
-//        print(shortNames)
-//    }
+    func filterUpdate() {
+        let cast = ["Vivien", "Marlon", "Kim", "Karl"]
+        let shortNames = cast.filter { $0.count < 5 }
+        print(shortNames)
+    }
     
     var body: some View {
         VStack (spacing: 5){
@@ -116,6 +116,7 @@ struct Calculator_View: View {
                     
                     
                 }
+                
             }
             
         }
