@@ -10,24 +10,51 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink {
-                    Selector_View()
+        VStack {
+            
+            NavigationView {
+                VStack {
+                    VStack (spacing: 40) {
+                        VStack (spacing: 5) {
+                            Text("Welcome to")
+                                .mainTitle()
+                            
+                            Text("Car.Info")
+                                .mainTitle()
+                            
+                            //This will add the image on the center of the page
+                            Image("tesla")
+                                .resizable()
+                                .scaledToFit()
+                                .padding()
+                            
+                            Text("Find Car Information")
+                                .secondTextStyle()
+                            Text("Click Below ")
+                                .secondTextStyle()
+                            
+                        }
+                        List {
+                            NavigationLink {
+                                Selector_View()
+                            }
+                        label: {
+                            Text("Search")
+                                .padding()
+                        }
+                            NavigationLink {
+                                PresetView()
+                            }
+                        label: {
+                            Text ("Presets")
+                                .padding ()
+                        }
+                        }
+                    }
                 }
-            label: {
-                Text("Search")
-                    .padding()
+                
             }
-                NavigationLink {
-                    PresetView()
-                }
-            label: {
-                Text ("Presets")
-                    .padding ()
-            }
-            }.navigationTitle("Home")
-        }
+        }.padding()
     }
     func doSomething() {
         

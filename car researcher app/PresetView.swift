@@ -22,7 +22,7 @@ struct PresetView: View {
             
         }
         
-        Text("Figure out whether clicking presets will take you to a filled out version of the selector view, where you then press show car, OR if you just go straight through the calculations and then show the car. It all burns down to whether we want the user to see what criteria falls within the presets. Also to consider: User will be adding presets from somewhere, so they'd already possibly need the ability to see what criteria is in the preset. If all these notes make sense!!")
+        //Text("Figure out whether clicking presets will take you to a filled out version of the selector view, where you then press show car, OR if you just go straight through the calculations and then show the car. It all burns down to whether we want the user to see what criteria falls within the presets. Also to consider: User will be adding presets from somewhere, so they'd already possibly need the ability to see what criteria is in the preset. If all these notes make sense!!")
     }
 }
 

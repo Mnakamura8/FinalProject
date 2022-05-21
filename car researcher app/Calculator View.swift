@@ -94,11 +94,11 @@ struct Calculator_View: View {
     @State var filteredArray: [SelectorViewItems] = []
 
     
-    func filterUpdate() {
-        let cast = ["Vivien", "Marlon", "Kim", "Karl"]
-        let shortNames = cast.filter { $0.count < 5 }
-        print(shortNames)
-    }
+//    func filterUpdate() {
+//        let carValues = (carDataArray.rawValue)
+//        let test = carValues.filter { $0.count < 5 }
+//        print("something to display filter")
+//    }
     
     var body: some View {
         VStack (spacing: 5){

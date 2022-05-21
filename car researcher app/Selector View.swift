@@ -80,7 +80,7 @@ struct Selector_View: View {
             
             
             NavigationLink{
-                Car_Show_View()
+              //  Car_Show_View()
             } label: {
                 
                 ZStack {
