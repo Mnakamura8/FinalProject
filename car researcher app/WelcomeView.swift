@@ -9,14 +9,39 @@
 
 import SwiftUI
 
+
 struct WelcomeView: View {
+    let car: SelectorViewItems
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (spacing: 40) {
+            VStack (spacing: 5) {
+                Text("Welcome to")
+                    .mainTitle()
+                
+                Text("Car.Info")
+                    .mainTitle()
+                
+                //This will add the image on the center of the page
+                Image("tesla")
+                    .resizable()
+                    .scaledToFit()
+                .padding()
+           
+                Text("Find Car Information")
+                    .secondTextStyle()
+                Text("Click Below ")
+                    .secondTextStyle()
+                
+            }
+            
+        }
     }
 }
 
+
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+        WelcomeView(car: SelectorViewItems(make: .dodgeCaravan, trans: .automatic, power: .gas, drive: .awd, size: .large, howManyDoors: .fourDoors))
     }
 }

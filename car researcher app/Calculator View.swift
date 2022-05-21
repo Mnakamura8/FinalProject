@@ -69,7 +69,8 @@ struct SelectorViewItems : Identifiable{
 struct Calculator_View: View {
     
     
-    @State var carData : [SelectorViewItems] = [
+    
+    @State var carDataArray : [SelectorViewItems] = [
         //essentially Subaru Outback
         SelectorViewItems(make: .subaru, trans: .cvt, power: .gas, drive: .awd, size: .large, howManyDoors:.fourDoors),
         //Honda
@@ -89,14 +90,35 @@ struct Calculator_View: View {
         SelectorViewItems(make: .chevy, trans: .automatic, power: .diesel, drive: .awd, size: .large, howManyDoors: .fourDoors)
         
     ]
+    //Might need this filterArray
+    @State var filteredArray: [SelectorViewItems] = []
+
     
-    
+    func filterUpdate() {
+        let cast = ["Vivien", "Marlon", "Kim", "Karl"]
+        let shortNames = cast.filter { $0.count < 5 }
+        print(shortNames)
+    }
     
     var body: some View {
-        VStack {
-            Text("Logic Demo")
-            Text("Wait... Do we need logic if we can filter arrays?? Considering we have a structure for cars, fill in the data, then simply say: display cars that match the best?")
-            Text ("Question is now: How do we calculate the best fits???")
+        VStack (spacing: 5){
+            ScrollView {
+                ForEach($carDataArray) { $carDataArray in
+                    VStack(alignment: .leading) {
+                        rowCarDetailsView(carDataArray: $carDataArray)
+                    }
+                    .frame(width: 250, height: 100, alignment: .leading)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue.cornerRadius(10))
+                    .padding(5)
+                    
+                    
+                    
+                }
+                
+            }
+            
         }
     }
 }
