@@ -46,9 +46,11 @@ enum DoorNumber : String, CaseIterable {
     case twoDoors = "2 Doors"
     case fourDoors = "4 Doors"
 }
-
-
-
+enum Presets : String, CaseIterable {
+    case family
+    case sporty
+    case economy
+}
 
 
 struct SelectorViewItems : Identifiable{
@@ -60,6 +62,7 @@ struct SelectorViewItems : Identifiable{
     var drive : WheelDrive
     var size : CarSize
     var howManyDoors : DoorNumber // Display two door cars initial?
+    var presetWords : Presets?
     
     //    var makeAndModel : String
     //    var image : String
@@ -72,20 +75,20 @@ struct Calculator_View: View {
     
     @State var carDataArray : [SelectorViewItems] = [
         //essentially Subaru Outback
-        SelectorViewItems(make: .subaru, trans: .cvt, power: .gas, drive: .awd, size: .large, howManyDoors:.fourDoors),
+        SelectorViewItems(make: .subaru, trans: .cvt, power: .gas, drive: .awd, size: .large, howManyDoors:.fourDoors, presetWords:.family),
         //Honda
-        SelectorViewItems (make: .honda, trans: .automatic, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors),
+        SelectorViewItems (make: .honda, trans: .automatic, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors, presetWords: .sporty),
         
         //MiniVan Dodge Caravan
-        SelectorViewItems (make: .dodgeCaravan, trans: .automatic, power: .gas, drive: .awd, size: .small, howManyDoors: .fourDoors),
+        SelectorViewItems (make: .dodgeCaravan, trans: .automatic, power: .gas, drive: .awd, size: .small, howManyDoors: .fourDoors, presetWords: .family),
         
         //Ferrari
-        SelectorViewItems (make: .ferrari, trans: .cvt, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors),
+        SelectorViewItems (make: .ferrari, trans: .cvt, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors, presetWords: .sporty),
         
         //Toyota Camry
-        SelectorViewItems(make: .toyota, trans: .automatic, power: .electric, drive: .fwd, size: .small, howManyDoors: .fourDoors),
+        SelectorViewItems(make: .toyota, trans: .automatic, power: .electric, drive: .fwd, size: .small, howManyDoors: .fourDoors, presetWords: .economy),
         //Tesla
-        SelectorViewItems(make: .tesla, trans: .automatic, power: .electric, drive: .fwd, size: .small, howManyDoors: .fourDoors),
+        SelectorViewItems(make: .tesla, trans: .automatic, power: .electric, drive: .fwd, size: .small, howManyDoors: .fourDoors, presetWords: .economy),
         //Chevy Silverado
         SelectorViewItems(make: .chevy, trans: .automatic, power: .diesel, drive: .awd, size: .large, howManyDoors: .fourDoors)
         
