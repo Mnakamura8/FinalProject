@@ -8,25 +8,18 @@
 
 import SwiftUI
 
-
-//struct EntireCars {
-//    var carOutputs = CarOutputs
-//    var transInput = ?
-//    var powerInput
-//    var driveTrainInput
-//    var sizeInput
-//    var doorsInput
-//
-//}
-
+struct CarStuffIGuess {
+    var carName : String
+    var carImage : String
+}
 struct Car_Show_View: View {
+    @State var dataSource : String = ""
+    
     var body: some View {
         List {
+            Text("Car Name Car Image")
         
-            Text("Have Some Cars Plz")
         }
-        
-        
       
     }
 }
