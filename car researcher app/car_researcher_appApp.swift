@@ -11,7 +11,7 @@ import SwiftUI
 struct car_researcher_appApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(carData: .constant(SelectorViewItems(make:.ferrari, trans: .automatic, power: .diesel, drive: .awd, size: .large, howManyDoors: .fourDoors)))
         }
     }
 }

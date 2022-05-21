@@ -13,9 +13,17 @@ struct PresetView: View {
             Text("Presets:")
             
             List { // Trans, Power, Drivetrain, Size, Doors
-                Text ("Family") // ? , ? , ? , big , 3 or 4, (KIA SOMEWTHING)
-                Text ("Sporty") // CVT/Manual , gas , RWD, Small, 2 (MIATA)
-                Text ("Economy") // CVT , Electric/Hybrid, ? , ? , ? (Something Economic?)
+                ForEach (Presets.allCases, id: \.self) {preset in
+                NavigationLink {
+                    Calculator_View(carDataArray: SelectorViewItems.carDataArray2.filter{
+                        $0.presetWords?.rawValue == preset.rawValue})
+                }
+            label: {
+                Text ("\(preset.rawValue)")
+                    .foregroundColor(.black)
+            }
+            } //Subaru outback, Dodge Carrivan,
+                
                 
             }
             Text ("Add Preset +")

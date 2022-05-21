@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @Binding var carData: SelectorViewItems
     var body: some View {
         VStack {
             
@@ -66,6 +67,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(carData: .constant(SelectorViewItems(make:.ferrari, trans: .automatic, power: .diesel, drive: .awd, size: .large, howManyDoors: .fourDoors)))
     }
 }

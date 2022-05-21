@@ -69,6 +69,30 @@ struct SelectorViewItems : Identifiable{
     
 }
 
+extension SelectorViewItems {
+    static var carDataArray2 : [SelectorViewItems] = [
+        //essentially Subaru Outback
+        SelectorViewItems(make: .subaru, trans: .cvt, power: .gas, drive: .awd, size: .large, howManyDoors:.fourDoors, presetWords:.family),
+        //Honda
+        SelectorViewItems (make: .honda, trans: .automatic, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors, presetWords: .sporty),
+        
+        //MiniVan Dodge Caravan
+        SelectorViewItems (make: .dodgeCaravan, trans: .automatic, power: .gas, drive: .awd, size: .small, howManyDoors: .fourDoors, presetWords: .family),
+        
+        //Ferrari
+        SelectorViewItems (make: .ferrari, trans: .cvt, power: .gas, drive: .fwd, size: .small, howManyDoors: .twoDoors, presetWords: .sporty),
+        
+        //Toyota Camry
+        SelectorViewItems(make: .toyota, trans: .automatic, power: .electric, drive: .fwd, size: .small, howManyDoors: .fourDoors, presetWords: .economy),
+        //Tesla
+        SelectorViewItems(make: .tesla, trans: .automatic, power: .electric, drive: .fwd, size: .small, howManyDoors: .fourDoors, presetWords: .economy),
+        //Chevy Silverado
+        SelectorViewItems(make: .chevy, trans: .automatic, power: .diesel, drive: .awd, size: .large, howManyDoors: .fourDoors)
+        
+    ]
+    
+}
+
 struct Calculator_View: View {
     
     
@@ -93,6 +117,7 @@ struct Calculator_View: View {
         SelectorViewItems(make: .chevy, trans: .automatic, power: .diesel, drive: .awd, size: .large, howManyDoors: .fourDoors)
         
     ]
+    
     //Might need this filterArray
     @State var filteredArray: [SelectorViewItems] = []
 
