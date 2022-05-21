@@ -17,7 +17,7 @@ struct Car_Show_View: View {
     
     var body: some View {
         List {
-            Text("Cars Name Car Image")
+            Text("Car Name Car Image")
         
         }
       
