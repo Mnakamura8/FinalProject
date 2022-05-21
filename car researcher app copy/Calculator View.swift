@@ -107,10 +107,10 @@ struct Calculator_View: View {
                     VStack(alignment: .leading) {
                         rowCarDetailsView(carDataArray: $carDataArray)
                     }
-                    .frame(width: 300, height: 100, alignment: .leading)
+                    .frame(width: 250, height: 100, alignment: .leading)
                     .foregroundColor(.white)
                     .padding()
-                    .background(Color.blue.cornerRadius(14))
+                    .background(Color.blue.cornerRadius(10))
                     .padding(5)
                     
                     
@@ -120,9 +120,6 @@ struct Calculator_View: View {
             }
             
         }
-        .frame (maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(hue: 0.325, saturation: 0.113, brightness: 0.928))
-        
     }
 }
 
