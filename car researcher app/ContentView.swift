@@ -13,27 +13,27 @@ struct ContentView: View {
         VStack {
             
             NavigationView {
-                VStack {
-                    VStack (spacing: 40) {
-                        VStack (spacing: 5) {
-                            Text("Welcome to")
-                                .mainTitle()
+                VStack (spacing: 40) {
+                    VStack (spacing: 5) {
+                        Text("Find your dream car")
+                            .foregroundColor(.black)
+                            .mainTitle()
                             
-                            Text("Car.Info")
-                                .mainTitle()
-                            
-                            //This will add the image on the center of the page
-                            Image("tesla")
-                                .resizable()
-                                .scaledToFit()
-                                .padding()
-                            
-                            Text("Find Car Information")
-                                .secondTextStyle()
-                            Text("Click Below ")
-                                .secondTextStyle()
-                            
-                        }
+                        Text("Car Researcher")
+                            .foregroundColor(.black)
+                            .mainTitle()
+                        
+                        Image("Subaru_Outback")
+                            .resizable()
+                            .scaledToFit()
+                        
+                        Text("Enter your Criteria or")
+                            .foregroundColor(.black)
+                            .secondTextStyle()
+                        Text("Select from Presets Below!")
+                            .foregroundColor(.black)
+                            .secondTextStyle()
+                        
                         List {
                             NavigationLink {
                                 Selector_View()
@@ -52,9 +52,10 @@ struct ContentView: View {
                         }
                     }
                 }
-                
             }
-        }.padding()
+            
+        }
+        
     }
     func doSomething() {
         
